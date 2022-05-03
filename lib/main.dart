@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:revenue/pages/category_meals_page/category_meals_page.dart';
 import 'package:revenue/pages/category_page/category_page.dart';
+import 'package:revenue/pages/meal_detail_page/meal_detail_page.dart';
+import 'package:revenue/pages/tabs_page/tabs_page.dart';
 import 'package:revenue/utils/app_routes/app_routes.dart';
 
 void main() {
@@ -14,6 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Revenue',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.pink,
         // ignore: deprecated_member_use
@@ -28,8 +31,16 @@ class MyApp extends StatelessWidget {
             ),
       ),
       routes: {
-        AppRoutes.HOME: (ctx) => const CategoryPage(),
+        AppRoutes.HOME: (ctx) => TabsPage(),
         AppRoutes.CATEGORY_MEALS: (ctx) => CategoryMealsPage(),
+        AppRoutes.MEAL_DETAIL: (ctx) => MealDetailPage(),
+      },
+      onUnknownRoute: (settings) {
+        return MaterialPageRoute(
+          builder: (_) {
+            return const CategoryPage();
+          },
+        );
       },
     );
   }
