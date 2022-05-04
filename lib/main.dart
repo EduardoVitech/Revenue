@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.pink,
         // ignore: deprecated_member_use
-        accentColor: Colors.amber,
+        accentColor: Colors.amber.shade700,
         fontFamily: 'Raleway',
         canvasColor: const Color.fromRGBO(255, 254, 229, 1),
         textTheme: ThemeData.light().textTheme.copyWith(
