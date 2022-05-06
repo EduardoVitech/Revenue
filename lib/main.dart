@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:revenue/pages/category_meals_page/category_meals_page.dart';
 import 'package:revenue/pages/category_page/category_page.dart';
 import 'package:revenue/pages/meal_detail_page/meal_detail_page.dart';
+import 'package:revenue/pages/settings_page/settings_page.dart';
 import 'package:revenue/pages/tabs_page/tabs_page.dart';
 import 'package:revenue/utils/app_routes/app_routes.dart';
 
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
         AppRoutes.HOME: (ctx) => TabsPage(),
         AppRoutes.CATEGORY_MEALS: (ctx) => CategoryMealsPage(),
         AppRoutes.MEAL_DETAIL: (ctx) => MealDetailPage(),
+        AppRoutes.SETTINGS: (ctx) => const SettingsPage(),
       },
       onUnknownRoute: (settings) {
         return MaterialPageRoute(
