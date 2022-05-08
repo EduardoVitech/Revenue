@@ -23,9 +23,11 @@ class CategoryItem extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(15),
         // ignore: sort_child_properties_last
-        child: Text(
-          category.title,
-          style: Theme.of(context).textTheme.headline6,
+        child: Center(
+          child: Text(
+            category.title,
+            style: Theme.of(context).textTheme.headline6,
+          ),
         ),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
