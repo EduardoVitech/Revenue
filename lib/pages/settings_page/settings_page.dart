@@ -4,24 +4,38 @@ import 'package:revenue/models/settings/settings.dart';
 import '../../widgets/main_drawer/main_drawer.dart';
 
 class SettingsPage extends StatefulWidget {
+  final Settings settings;
+  final Function(Settings) onSettingsChanged;
+
+  const SettingsPage(this.settings, this.onSettingsChanged);
+
   @override
   State<SettingsPage> createState() => _SettingsPageState();
 }
 
 class _SettingsPageState extends State<SettingsPage> {
-  var settings = Settings();
+  late Settings settings;
+
+  @override
+  void initState() {
+    super.initState();
+    settings = widget.settings;
+  }
 
   Widget _createSwitch(
     String title,
     String subtitle,
     bool value,
-    Function(bool)? onchanged,
+    Function(bool) onchanged,
   ) {
     return SwitchListTile.adaptive(
       title: Text(title),
       subtitle: Text(subtitle),
       value: value,
-      onChanged: onchanged,
+      onChanged: (value) {
+        onchanged(value);
+        widget.onSettingsChanged(settings);
+      },
     );
   }
 
