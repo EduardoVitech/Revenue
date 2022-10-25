@@ -1,16 +1,24 @@
-# revenue
+# Revenue
 
-A new Flutter project.
+App de receitas culinárias desenvolvido em Flutter.
 
-## Getting Started
+# Telas
 
-This project is a starting point for a Flutter application.
+- ## Home
+  - ![Home](./assets/CATEGORIAS.png)
+  
+- ## Favoritos
+  - ![Favoritos](./assets/FAVORITOS.png)  
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- ## Menu Lateral
+  - ![Menu Lateral](./assets/MENU-LATERAL.png)
+  
+- ## Lista de Receitas
+  - ![Lista de Receitas](./assets/LISTA-RECEITAS.png)  
+  
+- ## Receita
+  - ![Receita](./assets/RECEITA.png)   
+  - ![Receita](./assets/RECEITA2.png) 
+  
+- ## Configuração
+  - ![Configuração](./assets/CONFIGURACAO2.png)
